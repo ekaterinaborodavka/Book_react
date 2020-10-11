@@ -1,0 +1,10 @@
+export const ADD_ITEM = 'ADD_ITEM';
+export const DELETE_ITEM = 'DELETE_ITEM';
+export const CHANGE_CHECKBOX = 'CHANGE_CHECKBOX';
+export const CREATE_ITEM = 'CREATE_ITEM';
+export const SHOW_MODAL_FILTER = 'SHOW_MODAL_FILTER';
+export const CHANGE_EDIT = 'CHANGE_EDIT';
+export const CHANGE_ITEM = 'CHANGE_ITEM';
+export const CHANGE_EL_ID = 'CHANGE_EL_ID';
+export const CLEAR_FORM = 'CLEAR_FORM';
+export const UPDATE_FORM_BOOK = 'UPDATE_FORM_BOOK';
