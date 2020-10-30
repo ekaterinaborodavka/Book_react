@@ -15,7 +15,6 @@ const ModalWindowBook = (props) => {
     const checkbox = useSelector((state) => state.book.checkbox, shallowEqual);
     const dispatch = useDispatch();
     const { title, author, friend, until } = form
-console.log(changeEl);
     const addBook = (e) => {
       e.preventDefault();
       if(!edit){
@@ -44,6 +43,7 @@ console.log(changeEl);
       }, [dispatch],
   );
 
+
   return (
     <div className= { modal }>
     <form className='modal-content'
@@ -54,36 +54,36 @@ console.log(changeEl);
         <div className='book'>
         <input id='title_book'
             name='title'
-            defaultValue={ changeEl.length === 0 ? title : 
-            changeEl[0].title }
-            placeholder='Title of the book:' 
+            value={  title }
+            placeholder={ changeEl[0].title === '' ? 
+            'Title of the book:' : changeEl[0].title }
             type='text'
             onChange={ onInputChange } />
         </div>
         <div className='friend'>
         <input id='title_friend' 
             name='friend'
-            defaultValue={ changeEl.length === 0 ? friend : 
-            changeEl[0].friend }
-            placeholder='Lent to friend:' 
+            value={ friend }
+            placeholder={ changeEl[0].title === '' ? 
+            'Lent to friend:' : changeEl[0].friend }
             type='text'
             onChange={ onInputChange } />
         </div>
         <div className='author'>
         <input id='title_author' 
             name='author'
-            defaultValue={ changeEl.length === 0 ? author : 
-            changeEl[0].author }
-            placeholder='Author' 
+            value={ author }
+            placeholder={ changeEl[0].title === '' ? 
+            'Author' : changeEl[0].author }
             type='text'
             onChange={ onInputChange } />
         </div>
         <div className='until'>
         <input id='title_until' 
             name='until'
-            defaultValue={ changeEl.length === 0 ? until : 
-            changeEl[0].until }
-            placeholder='Until:' 
+            value={ until }
+            placeholder={ changeEl[0].title === '' ? 
+            'Until' : changeEl[0].until }
             type='date'
             onChange={ onInputChange } />
         </div>

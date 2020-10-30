@@ -11,6 +11,12 @@ import { addNewItem,
   modalValue,
   removeItem } from '../../utils/booksUtils'
 
+  const changeElEmpty = {
+    title: '',
+    author: '',
+    friend: '',
+    until: '',
+  }
 
 const initialState = {
   books,
@@ -18,7 +24,7 @@ const initialState = {
   filter: 'filter',
   edit: false,
   changeElId: '',
-  changeEl: [],
+  changeEl: [changeElEmpty],
   checkbox: false 
 };
 
@@ -63,12 +69,6 @@ const reducer = (state = initialState, action) => {
       };
     }
     case SHOW_MODAL_FILTER: {
-      const changeElEmpty = {
-        title: '',
-        author: '',
-        friend: '',
-        until: '',
-      }
       return {
         ...state,
         modal: action.modal,
