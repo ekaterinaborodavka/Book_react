@@ -4,7 +4,7 @@ import { ADD_ITEM,
   CHANGE_ITEM,
   CHANGE_EL_ID,
   DELETE_ITEM,
-  CHANGE_CHECKBOX} from '../types/types'
+  CHANGE_CHECKBOX} from '../types/types';
 
 export const addItem = (newElement) => {
   return {
@@ -16,13 +16,13 @@ export const addItem = (newElement) => {
 export const deleteItem= (id) => {
   return {
     type: DELETE_ITEM,
-    id
+    id,
   };
 };
 
 export const changeCheckbox = () => {
   return {
-    type: CHANGE_CHECKBOX
+    type: CHANGE_CHECKBOX,
   };
 };
 
@@ -45,13 +45,13 @@ export const showModalFilter= (classModal, classFilter) => {
   return {
     type: SHOW_MODAL_FILTER,
     modal: classModal,
-    filter: classFilter
+    filter: classFilter,
   };
 };
 
 export const changeEdit= (bool) => {
   return {
     type: CHANGE_EDIT,
-    bool
+    bool,
   };
 };

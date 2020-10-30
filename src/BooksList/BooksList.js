@@ -1,7 +1,9 @@
 import React from 'react';
-import BooksListItem from '../BooksListItem/BooksListItem'
+import PropTypes from 'prop-types';
 
-export default function GoodsList(props) {
+import BooksListItem from '../BooksListItem/BooksListItem';
+
+export default function BookList(props) {
   const { books, showModal } = props;
 
   return (
@@ -18,3 +20,8 @@ export default function GoodsList(props) {
     </ul>
   );
 }
+
+BookList.propTypes = {
+  books: PropTypes.array,
+  showModal: PropTypes.func,
+};

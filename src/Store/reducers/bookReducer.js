@@ -5,18 +5,18 @@ import { ADD_ITEM,
   CHANGE_ITEM,
   DELETE_ITEM,
   CHANGE_EL_ID,
-  CHANGE_CHECKBOX } from '../types/types'
+  CHANGE_CHECKBOX } from '../types/types';
 import { addNewItem,
-  changeBook, 
+  changeBook,
   modalValue,
-  removeItem } from '../../utils/booksUtils'
+  removeItem } from '../../utils/booksUtils';
 
-  const changeElEmpty = {
-    title: '',
-    author: '',
-    friend: '',
-    until: '',
-  }
+const changeElEmpty = {
+  title: '',
+  author: '',
+  friend: '',
+  until: '',
+};
 
 const initialState = {
   books,
@@ -25,7 +25,7 @@ const initialState = {
   edit: false,
   changeElId: '',
   changeEl: [changeElEmpty],
-  checkbox: false 
+  checkbox: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -53,7 +53,9 @@ const reducer = (state = initialState, action) => {
       };
     }
     case CHANGE_ITEM: {
-      const newTodoList = changeBook(state.books, action.changeElement, action.id)
+      const newTodoList = changeBook(state.books,
+          action.changeElement,
+          action.id);
       return {
         ...state,
         books: newTodoList,
@@ -61,11 +63,11 @@ const reducer = (state = initialState, action) => {
       };
     }
     case CHANGE_EL_ID: {
-      const currentEl = modalValue(state.books,action.id)
+      const currentEl = modalValue(state.books, action.id);
       return {
         ...state,
         changeElId: action.id,
-        changeEl: currentEl
+        changeEl: currentEl,
       };
     }
     case SHOW_MODAL_FILTER: {
